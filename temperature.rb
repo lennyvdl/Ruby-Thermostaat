@@ -33,24 +33,4 @@ class Temperature
       puts temp_test
 
     end
-
-
-
-
-
-=begin
-  def colour_led(temperature,range)
-    @temperature= temperature
-    @range = range
-    #@unit = unit
-
-        if @endtemp > (20 +@endrange)
-          puts "red"
-        elsif @endtemp < (20 -@endrange)
-          puts "blue"
-        else
-          puts "green"
-        end
-    end
-=end
 end
