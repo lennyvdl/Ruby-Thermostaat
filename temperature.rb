@@ -1,27 +1,4 @@
 class Temperature
-=begin
-  def ask_unit
-    puts "What unit are you using????? k = kelvin, c = celsius, f = Fahrenheit aka pleb unit"
-  end
-
-  def ask_temp
-    puts "Whats the temperature? "
-  end
-
-
-  def get_temp
-    temperature = ARGV[0].to_i
-  end
-
-  def range
-    range = ARGV[1].to_i
-  end
-
-  def get_unit
-    unit = ARGV[2].gets.downcase.delete!("\n")
-  end
-=end
-
   def convert
     if @unit == "f"
     @endtemp = (@temperature* 1.8 + 32)
@@ -36,10 +13,11 @@ class Temperature
     end
   end
 
-  def clitemp(temperature,range)
+  def clitemp(temperature,range,unit)
     @temperature= temperature
     @range = range
-    #@unit = unit
+    @unit = unit
+    convert
 
         if @temperature > (20 +@range)
           puts "red"
@@ -49,6 +27,16 @@ class Temperature
           puts "green"
         end
     end
+
+    def open
+      temp_test = (URI.parse("https://labict.be/software-engineering/temperature/api/temperature/fake").read).to_f
+      puts temp_test
+
+    end
+
+
+
+
 
 =begin
   def colour_led(temperature,range)
