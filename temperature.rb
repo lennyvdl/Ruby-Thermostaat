@@ -1,5 +1,6 @@
 require_relative "convert"
 class Temperature
+=begin
   def clitemp(temperature,range,unit)
     $temperature= temperature
     $range = range
@@ -15,10 +16,16 @@ class Temperature
           puts "green"
         end
     end
+=end
 
+def temperatuur(temperature,range,unit)
+
+#test url
+=begin
     def open
       temp_test = (URI.parse("https://labict.be/software-engineering/temperature/api/temperature/fake").read).to_f
       puts temp_test
 
     end
+=end
 end
